@@ -288,7 +288,7 @@
     gap:20px;
     flex-wrap:nowrap;
   }
-  #cpa-root .brand{display:flex; align-items:center; gap:10px; min-width:0; flex-shrink:1;}
+  #cpa-root .brand{display:flex; align-items:center; gap:18px; min-width:0; flex-shrink:1;}
   #cpa-root .brand-icon{width:110px; height:110px; object-fit:contain; flex-shrink:0; display:block; margin-top:0;}
   #cpa-root .brand-text{font-size:1.59rem; font-weight:700; line-height:1.15; min-width:0; overflow:hidden; text-align:left;}
   #cpa-root .brand-text span{
@@ -305,9 +305,7 @@
     overflow:hidden;
     text-overflow:ellipsis;
     white-space:nowrap;
-    background:linear-gradient(90deg, #5686f5, #2f66f2, #16308f);
-    -webkit-background-clip:text; background-clip:text;
-    color:transparent; -webkit-text-fill-color:transparent;
+    color:var(--ink-500);
   }
   #cpa-root .header-actions{display:flex; align-items:center; gap:14px; flex-shrink:0;}
   #cpa-root .lang-switch{
@@ -414,31 +412,31 @@
   /* ============================================================
      HERO
      ============================================================ */
-  #cpa-root .hero{padding:clamp(20px,3vw,32px) 0 0;}
+  #cpa-root .hero{padding:clamp(28px,4vw,48px) 0 0;}
   #cpa-root .hero .wrap{width:min(1760px, 96vw);}
   #cpa-root .hero-card{
     background:var(--white);
     border-radius:var(--r-lg);
     box-shadow:var(--shadow-card);
-    padding:clamp(24px, 3.4vw, 40px) clamp(28px, 4.4vw, 56px);
+    padding:clamp(48px, 7vw, 96px) clamp(32px, 5vw, 64px);
   }
   #cpa-root .hero-layout{
     display:grid;
     grid-template-columns:1.4fr .9fr;
-    gap:clamp(24px, 4vw, 48px);
+    gap:clamp(32px, 5vw, 64px);
     align-items:center;
   }
   #cpa-root .hero-card h1{
     font-weight:700;
-    font-size:clamp(1.625rem, 2.6vw, 2.375rem);
-    line-height:1.2;
+    font-size:clamp(2rem, 3.6vw, 3.5rem);
+    line-height:1.15;
     letter-spacing:-.01em;
   }
   #cpa-root .hero-h1--left{margin-top:0;}
   #cpa-root .hero-card h1 .accent{color:var(--blue-600);}
   #cpa-root .hero-card .lede{
-    margin-top:1.1em;
-    font-size:1.0625rem;
+    margin-top:1.4em;
+    font-size:1.1875rem;
     color:var(--ink-700);
   }
   #cpa-root .lede-link{
@@ -450,7 +448,7 @@
     transition:text-decoration-color .2s var(--ease);
   }
   #cpa-root .lede-link:hover{text-decoration-color:var(--blue-600);}
-  #cpa-root .hero-cta{display:flex; align-items:center; gap:22px; margin-top:1.8em; flex-wrap:wrap;}
+  #cpa-root .hero-cta{display:flex; align-items:center; gap:22px; margin-top:2.4em; flex-wrap:wrap;}
   #cpa-root .text-link{
     display:inline-flex; align-items:center; gap:6px;
     font-weight:700; font-size:.9375rem; color:var(--blue-600);
@@ -460,18 +458,18 @@
 
   /* -- practices panel: light-to-dark shimmering gradient, per the sketch -- */
   #cpa-root .hero-practices{
-    padding:26px 0 0;
+    padding:0;
     display:flex;
     flex-direction:column;
-    gap:22px;
+    gap:30px;
   }
   #cpa-root .hero-practices__brand{
     display:flex;
     align-items:center;
     gap:14px;
   }
-  #cpa-root .hero-practices__brand img{width:44px; height:44px; border-radius:11px; flex-shrink:0;}
-  #cpa-root .hero-practices__name{color:var(--ink-900); font-weight:800; font-size:1.125rem; line-height:1.2;}
+  #cpa-root .hero-practices__brand img{width:56px; height:56px; border-radius:13px; flex-shrink:0;}
+  #cpa-root .hero-practices__name{color:var(--ink-900); font-weight:800; font-size:1.3125rem; line-height:1.2;}
   #cpa-root .hero-practices__kicker{
     color:var(--ink-500);
     font-size:.6875rem;
@@ -480,16 +478,16 @@
     letter-spacing:.05em;
     margin-top:2px;
   }
-  #cpa-root .hero-practices__list{display:flex; flex-direction:column; gap:10px;}
+  #cpa-root .hero-practices__list{display:flex; flex-direction:column; gap:14px;}
   #cpa-root .hero-practices__list a{
     position:relative;
     overflow:hidden;
     display:flex; align-items:center; justify-content:space-between; gap:10px;
     background:var(--blue-600);
     color:#fff;
-    padding:14px 16px;
-    border-radius:12px;
-    font-size:.8438rem;
+    padding:19px 22px;
+    border-radius:14px;
+    font-size:.9375rem;
     font-weight:700;
     transition:background-color .2s var(--ease), transform .2s var(--ease);
   }
