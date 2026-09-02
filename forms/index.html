@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Обсудить вашу задачу — Содействие</title>
+<meta name="description" content="Опишите ситуацию — вернёмся с ответом в течение одного рабочего дня.">
+<link rel="canonical" href="https://YOUR-DOMAIN.example/forms/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Содействие">
+<meta property="og:title" content="Обсудить вашу задачу — Содействие">
+<meta property="og:description" content="Опишите ситуацию — вернёмся с ответом в течение одного рабочего дня.">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<!-- Google Fonts (Golos Text) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<style>
+
+  #cpa-root{
+    --bg:#f1f1f3;
+    --white:#ffffff;
+    --ink-900:#0d1420;
+    --ink-700:#3d4658;
+    --ink-500:#69748a;
+    --line:#e4e8f0;
+    --line-strong:#d7dce6;
+
+    --blue-700:#123f9e;
+    --blue-600:#1c4fd6;
+    --blue-500:#2f66f2;
+    --blue-100:#e8edfd;
+
+    --navy-900:#0b1220;
+    --navy-800:#121b2e;
+
+    --gold-500:#e7cd99;
+    --gold-700:#b6975c;
+
+    --font:'Golos Text', 'Segoe UI', sans-serif;
+
+    --container:min(1200px, 92vw);
+    --r-sm:10px;
+    --r-md:20px;
+    --r-lg:32px;
+    --r-pill:999px;
+
+    --shadow-card:0 20px 44px -28px rgba(13,20,32,.18);
+    --shadow-pop:0 30px 70px -24px rgba(13,20,32,.28);
+
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  #cpa-root, #cpa-root *, #cpa-root *::before, #cpa-root *::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  #cpa-root{
+    background:var(--bg);
+    color:var(--ink-900);
+    font-family:var(--font);
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  #cpa-root img{max-width:100%;display:block;}
+  #cpa-root a{color:inherit;text-decoration:none;}
+  #cpa-root ul{margin:0;padding:0;list-style:none;}
+  #cpa-root p, #cpa-root a, #cpa-root span, #cpa-root li{overflow-wrap:break-word; word-break:break-word;}
+  /* clip horizontal overflow on the body content only -- deliberately
+     NOT on #cpa-root itself, which would break the sticky header
+     (position:sticky stops working under any ancestor with overflow
+     other than visible) */
+  #cpa-root main, #cpa-root .site-footer{overflow-x:hidden;}
+  #cpa-root h1,#cpa-root h2,#cpa-root h3,#cpa-root h4,#cpa-root p{margin:0;}
+  #cpa-root button{font:inherit;color:inherit;background:none;border:none;cursor:pointer;}
+
+  #cpa-root section[id]{scroll-margin-top:110px;}
+  #cpa-root ::selection{background:var(--blue-600); color:var(--white);}
+
+  #cpa-root :focus-visible{
+    outline:2px solid var(--blue-600);
+    outline-offset:3px;
+    border-radius:4px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    #cpa-root *, #cpa-root *::before, #cpa-root *::after{
+      animation-duration:.001ms !important;
+      animation-iteration-count:1 !important;
+      transition-duration:.001ms !important;
+      scroll-behavior:auto !important;
+    }
+  }
+
+  #cpa-root .wrap{width:var(--container); margin-inline:auto;}
+  #cpa-root .section{padding:clamp(56px, 7vw, 108px) 0;}
+
+  #cpa-root .section-head{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:24px;
+    flex-wrap:wrap;
+    margin-bottom:clamp(28px, 4vw, 44px);
+  }
+  #cpa-root .section-head h2{
+    font-weight:800;
+    font-size:clamp(1.75rem, 3vw, 2.375rem);
+    line-height:1.15;
+    letter-spacing:-.01em;
+  }
+  #cpa-root .accent{color:var(--blue-600);}
+
+  #cpa-root .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:.5em;
+    padding:.85em 1.6em;
+    border-radius:var(--r-pill);
+    font-weight:700;
+    font-size:.9375rem;
+    white-space:nowrap;
+    transition:transform .25s var(--ease), background-color .25s var(--ease), border-color .25s var(--ease), color .25s var(--ease);
+  }
+  #cpa-root .btn--primary{background:var(--ink-900); color:var(--white);}
+  #cpa-root .btn--primary:hover{background:var(--blue-600); transform:translateY(-1px);}
+  #cpa-root .btn--outline{border:1.5px solid var(--line-strong); color:var(--ink-900); background:var(--white);}
+  #cpa-root .btn--outline:hover{border-color:var(--blue-600); color:var(--blue-600);}
+
+  #cpa-root .pill-tag{
+    display:inline-flex;
+    align-items:center;
+    font-size:.8125rem;
+    font-weight:600;
+    padding:.5em 1.05em;
+    border-radius:var(--r-pill);
+    background:var(--white);
+    border:1px solid var(--line-strong);
+    color:var(--ink-700);
+  }
+  #cpa-root .pill-tag--onblue{background:rgba(255,255,255,.14); border-color:rgba(255,255,255,.32); color:#fff;}
+
+  #cpa-root .arrow-tile{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    background:var(--blue-600);
+    color:var(--white);
+    border-radius:var(--r-md);
+    padding:28px;
+    min-height:150px;
+    overflow:hidden;
+    transition:background-color .3s var(--ease), transform .3s var(--ease);
+  }
+  #cpa-root .arrow-tile::before{
+    content:"";
+    position:absolute;
+    top:0; left:-60%;
+    width:40%; height:100%;
+    background:linear-gradient(115deg, transparent, rgba(255,255,255,.22), transparent);
+    transform:skewX(-18deg);
+    transition:left .7s var(--ease);
+    pointer-events:none;
+  }
+  #cpa-root .arrow-tile:hover::before{left:120%;}
+  #cpa-root .arrow-tile:hover{background:var(--blue-700); transform:translateY(-2px);}
+  #cpa-root .arrow-tile .label{font-weight:700; font-size:1.125rem; max-width:32ch;}
+  #cpa-root .arrow-tile .arrow{
+    align-self:flex-end;
+    width:34px;height:34px;
+    transition:transform .3s var(--ease);
+  }
+  #cpa-root .arrow-tile:hover .arrow{transform:translate(4px,-4px);}
+  #cpa-root .arrow-tile.is-dark{background:linear-gradient(135deg, #16234a 0%, var(--navy-900) 65%, #060a12 100%);}
+  #cpa-root .arrow-tile.is-dark:hover{background:linear-gradient(135deg, #1a2c5c 0%, #0d1526 65%, #000 100%);}
+
+  #cpa-root .icon-chip{
+    width:52px; height:52px;
+    border-radius:14px;
+    background:rgba(255,255,255,.18);
+    border:1px solid rgba(255,255,255,.34);
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+  #cpa-root .icon-chip svg{width:26px; height:26px; color:#fff;}
+  #cpa-root .icon-chip--light{background:var(--blue-100); border-color:transparent;}
+  #cpa-root .icon-chip--light svg{color:var(--blue-600);}
+
+  #cpa-root .band{
+    position:relative;
+    overflow:hidden;
+    border-radius:var(--r-lg);
+  }
+  #cpa-root .band::after{
+    content:"";
+    position:absolute;
+    width:260px; height:260px;
+    border:1.5px solid rgba(255,255,255,.16);
+    border-radius:50%;
+    right:-80px; bottom:-90px;
+  }
+  #cpa-root .band--a{background:linear-gradient(135deg, #0b1220 0%, #123f9e 100%);}
+  #cpa-root .band--b{background:linear-gradient(135deg, #123f9e 0%, #2f66f2 60%, #6f94f7 100%);}
+  #cpa-root .band--c{background:linear-gradient(160deg, #1c4fd6 0%, #0b1220 100%);}
+  #cpa-root .band--d{background:linear-gradient(200deg, #2f66f2 0%, #123f9e 55%, #0b1220 100%);}
+
+  /* ============================================================
+     MOTION -- same reveal system as the homepage.
+     ============================================================ */
+  html.js #cpa-root [data-reveal]{
+    opacity:0;
+    transition:opacity .8s var(--ease), transform .8s var(--ease);
+  }
+  html.js #cpa-root [data-reveal="up"]{transform:translateY(30px);}
+  html.js #cpa-root [data-reveal="left"]{transform:translateX(-36px);}
+  html.js #cpa-root [data-reveal="right"]{transform:translateX(36px);}
+  html.js #cpa-root [data-reveal="scale"]{transform:scale(.94);}
+  html.js #cpa-root [data-reveal="self"]{opacity:1; transform:none;}
+  html.js #cpa-root [data-reveal].is-visible{opacity:1; transform:none;}
+
+  #cpa-root .stagger > *:nth-child(1){transition-delay:.03s;}
+  #cpa-root .stagger > *:nth-child(2){transition-delay:.12s;}
+  #cpa-root .stagger > *:nth-child(3){transition-delay:.21s;}
+  #cpa-root .stagger > *:nth-child(4){transition-delay:.3s;}
+  #cpa-root .stagger > *:nth-child(5){transition-delay:.39s;}
+  #cpa-root .stagger > *:nth-child(6){transition-delay:.48s;}
+
+  #cpa-root .process-list::before{
+    transform-origin:left center;
+    transform:scaleX(0);
+    transition:transform 1.1s var(--ease) .15s;
+  }
+  #cpa-root .process-list.is-visible::before{transform:scaleX(1);}
+
+  #cpa-root .node-diagram .line{
+    stroke-dasharray:640;
+    stroke-dashoffset:640;
+    transition:stroke-dashoffset 1.3s var(--ease);
+  }
+  #cpa-root .node-diagram .node{
+    opacity:0;
+    transform:scale(.3);
+    transform-box:fill-box;
+    transform-origin:center;
+    transition:opacity .5s var(--ease), transform .6s cubic-bezier(.34,1.56,.64,1);
+  }
+  #cpa-root .node-diagram .node:nth-of-type(1){transition-delay:.5s;}
+  #cpa-root .node-diagram .node:nth-of-type(2){transition-delay:.62s;}
+  #cpa-root .node-diagram .node:nth-of-type(3){transition-delay:.74s;}
+  #cpa-root .node-diagram .node:nth-of-type(4){transition-delay:.86s;}
+  #cpa-root .node-diagram .node--main{transition-delay:.15s !important;}
+  #cpa-root .node-diagram text{opacity:0; transition:opacity .6s var(--ease) .9s;}
+  #cpa-root .node-diagram.is-visible .line{stroke-dashoffset:0;}
+  #cpa-root .node-diagram.is-visible .node{opacity:1; transform:scale(1);}
+  #cpa-root .node-diagram.is-visible text{opacity:1;}
+
+  #cpa-root .btn:active, #cpa-root .arrow-tile:active{transform:scale(.97);}
+
+  /* ============================================================
+     HEADER
+     ============================================================ */
+  #cpa-root .site-header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(243,245,249,.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid transparent;
+    transition:border-color .3s var(--ease), background-color .3s var(--ease);
+    padding:0px 0;
+  }
+  #cpa-root .site-header.is-scrolled{
+    background:rgba(255,255,255,.92);
+    border-bottom-color:var(--line);
+  }
+  #cpa-root .site-header .wrap{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:nowrap;
+  }
+  #cpa-root .brand{display:flex; align-items:center; gap:1.5px; min-width:0; flex-shrink:1;}
+  #cpa-root .brand-icon{width:110px; height:110px; object-fit:contain; flex-shrink:0; display:block; margin-top:12px;}
+  #cpa-root .brand-text{font-size:1.59rem; font-weight:800; line-height:1.15; min-width:0; overflow:hidden; text-align:left;}
+  #cpa-root .brand-text span{
+    display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+    background:linear-gradient(90deg, #5686f5, #2f66f2, #16308f);
+    -webkit-background-clip:text; background-clip:text;
+    color:transparent; -webkit-text-fill-color:transparent;
+  }
+  #cpa-root .brand-text small{
+    display:block;
+    font-weight:600;
+    font-size:1.03rem;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    margin-top:2px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    background:linear-gradient(90deg, #5686f5, #2f66f2, #16308f);
+    -webkit-background-clip:text; background-clip:text;
+    color:transparent; -webkit-text-fill-color:transparent;
+  }
+
+  #cpa-root .header-actions{display:flex; align-items:center; gap:14px; flex-shrink:0;}
+
+  #cpa-root .lang-switch{
+    display:flex;
+    align-items:center;
+    gap:2px;
+    padding:3px;
+    border-radius:999px;
+    border:1.5px solid rgba(13,20,32,.16);
+    background:transparent;
+    flex-shrink:0;
+  }
+  #cpa-root .lang-switch button{
+    padding:.6em .85em;
+    border-radius:999px;
+    font-size:.75rem;
+    font-weight:700;
+    letter-spacing:.02em;
+    color:var(--ink-500);
+    transition:background-color .2s var(--ease), color .2s var(--ease);
+  }
+  #cpa-root .lang-switch button[aria-pressed="true"]{background:var(--ink-900); color:#fff;}
+
+  #cpa-root .nav-popover-wrap{position:relative; flex-shrink:0;}
+
+  #cpa-root .menu-btn{
+    display:none;
+    width:42px; height:42px;
+    border-radius:50%;
+    background:var(--ink-900);
+    color:var(--white);
+    align-items:center; justify-content:center;
+    flex-shrink:0;
+    transition:background-color .2s var(--ease);
+  }
+  #cpa-root .menu-btn:hover{background:var(--blue-600);}
+  #cpa-root .menu-btn svg{width:16px; height:16px;}
+
+  /* desktop: plain inline nav, no popup, no burger */
+  #cpa-root .main-nav{
+    display:flex;
+    align-items:center;
+    gap:26px;
+  }
+  #cpa-root .main-nav a{
+    font-size:.9375rem;
+    font-weight:600;
+    color:var(--ink-700);
+    transition:color .2s var(--ease);
+  }
+  #cpa-root .main-nav a:hover{color:var(--blue-600);}
+  #cpa-root .main-nav a.is-active{color:var(--blue-600);}
+
+  /* mobile: burger appears, nav becomes an anchored popup */
+  @media (max-width:920px){
+    #cpa-root .menu-btn{display:inline-flex;}
+    #cpa-root .main-nav{
+      position:fixed;
+      top:80px;
+      right:16px;
+      z-index:200;
+      width:min(300px, calc(100vw - 32px));
+      max-height:calc(100vh - 100px);
+      overflow-y:auto;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:16px;
+      box-shadow:var(--shadow-pop);
+      flex-direction:column;
+      align-items:stretch;
+      gap:2px;
+      padding:10px;
+      opacity:0;
+      transform:translateY(-8px) scale(.98);
+      pointer-events:none;
+      transition:opacity .22s var(--ease), transform .22s var(--ease);
+    }
+    #cpa-root .main-nav.is-open{opacity:1; transform:translateY(0) scale(1); pointer-events:auto;}
+    #cpa-root .main-nav a{
+      padding:10px 12px;
+      border-radius:10px;
+      transition:background-color .2s var(--ease), color .2s var(--ease);
+    }
+    #cpa-root .main-nav a:hover{background:rgba(28,79,214,.1);}
+    #cpa-root .main-nav a.is-active{background:var(--blue-100);}
+
+    #cpa-root .brand-icon{width:56px; height:56px; margin-top:5px; margin-left:3px;}
+    #cpa-root .brand-text{font-size:1.1rem;}
+    #cpa-root .header-actions{gap:8px;}
+    #cpa-root .lang-switch{order:-1;}
+    #cpa-root .lang-switch button[aria-pressed="false"]{display:none;}
+  }
+  @media (max-width:520px){
+    #cpa-root .brand-text small{display:none;}
+  }
+
+  /* ============================================================
+     CONTACT FORM (shared by /forms and /contacts)
+     ============================================================ */
+  #cpa-root .contact-layout{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:clamp(24px,4vw,48px);
+    align-items:start;
+  }
+  #cpa-root .contact-form{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:var(--r-lg);
+    box-shadow:var(--shadow-card);
+    padding:clamp(24px, 3vw, 40px);
+  }
+  #cpa-root .form-row{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  #cpa-root .field{margin-bottom:18px;}
+  #cpa-root .field label{display:block; font-size:.8125rem; font-weight:700; color:var(--ink-700); margin-bottom:8px;}
+  #cpa-root .field input, #cpa-root .field select, #cpa-root .field textarea{
+    width:100%;
+    background:var(--bg);
+    border:1.5px solid var(--line-strong);
+    border-radius:12px;
+    padding:.85em 1em;
+    color:var(--ink-900);
+    transition:border-color .2s var(--ease);
+  }
+  #cpa-root .field input::placeholder, #cpa-root .field textarea::placeholder{color:var(--ink-500);}
+  #cpa-root .field input:focus, #cpa-root .field select:focus, #cpa-root .field textarea:focus{border-color:var(--blue-600); outline:none;}
+  #cpa-root .field textarea{resize:vertical; min-height:110px;}
+
+  #cpa-root .file-field{
+    display:flex; align-items:center; gap:12px;
+    border:1.5px dashed var(--line-strong);
+    border-radius:12px;
+    padding:.85em 1em;
+    font-size:.875rem; color:var(--ink-700);
+    cursor:pointer;
+    transition:border-color .2s var(--ease);
+  }
+  #cpa-root .file-field:hover{border-color:var(--blue-600);}
+  #cpa-root .file-field svg{width:18px; height:18px; flex-shrink:0; color:var(--blue-600);}
+  #cpa-root .file-field input{display:none;}
+
+  #cpa-root .consent{display:flex; align-items:flex-start; gap:10px; font-size:.8125rem; color:var(--ink-500); margin:20px 0 22px;}
+  #cpa-root .consent input{margin-top:3px;}
+  #cpa-root .consent a{color:var(--blue-600); text-decoration:underline; text-underline-offset:2px;}
+
+  #cpa-root .contact-form .btn--primary{width:100%;}
+
+  #cpa-root .contact-info{display:flex; flex-direction:column; gap:20px;}
+  #cpa-root .info-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:var(--r-md);
+    padding:26px;
+  }
+  #cpa-root .info-row{display:flex; gap:14px; padding:14px 0; border-top:1px solid var(--line);}
+  #cpa-root .info-row:first-child{border-top:none; padding-top:0;}
+  #cpa-root .info-row svg{width:20px; height:20px; flex-shrink:0; color:var(--blue-600); margin-top:2px;}
+  #cpa-root .info-row .label{font-size:.75rem; color:var(--ink-500); text-transform:uppercase; letter-spacing:.05em;}
+  #cpa-root .info-row .value{margin-top:.25em; font-size:.9375rem; font-weight:600;}
+
+  #cpa-root .info-note{font-size:.875rem; color:var(--ink-700); padding:22px 26px; background:var(--blue-100); border-radius:var(--r-md);}
+
+  @media (max-width:920px){ #cpa-root .contact-layout{grid-template-columns:1fr;} }
+  @media (max-width:560px){ #cpa-root .form-row{grid-template-columns:1fr;} }
+
+  /* ============================================================
+     PAGE BANNER -- big, unmistakable page name for interior pages
+     ============================================================ */
+  #cpa-root .page-banner{
+    padding:clamp(30px,4.5vw,48px) clamp(28px,4vw,40px);
+    display:flex;
+    align-items:center;
+  }
+  #cpa-root .page-banner__label{
+    color:#fff;
+    font-weight:900;
+    font-size:clamp(1.625rem, 3.6vw, 2.5rem);
+    letter-spacing:-.01em;
+  }
+
+  /* ============================================================
+     PAGE HERO
+     ============================================================ */
+  #cpa-root .page-hero h1{
+    margin-top:.6em;
+    font-weight:800;
+    font-size:clamp(1.625rem, 2.6vw, 2.375rem);
+    line-height:1.2;
+    letter-spacing:-.01em;
+    max-width:20ch;
+  }
+  #cpa-root .page-hero .lede{
+    margin-top:1em;
+    max-width:56ch;
+    font-size:1.0625rem;
+    color:var(--ink-700);
+  }
+
+  /* ============================================================
+     FOOTER
+     ============================================================ */
+  #cpa-root .site-footer{border-top:1px solid var(--line); padding:28px 0;}
+  #cpa-root .site-footer .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    gap:16px; flex-wrap:wrap;
+    font-size:.875rem; color:var(--ink-500);
+  }
+  #cpa-root .footer-links{display:flex; gap:22px;}
+  #cpa-root .footer-links a{display:inline-block; padding:8px 0; text-decoration:underline; text-underline-offset:2px; transition:color .2s var(--ease);}
+  #cpa-root .footer-links a:hover{color:var(--blue-600);}
+
+
+  #cpa-root .form-page-hero{padding-bottom:0;}
+
+
+</style>
+</head>
+<body>
+<div id="cpa-root">
+<script>document.documentElement.classList.add('js');</script>
+
+<header class="site-header" id="cpa-site-header">
+  <div class="wrap">
+    <a href="/" class="brand" aria-label="Содействие — на главную">
+      <img class="js-logo brand-icon" alt="Эмблема «Содействие»" width="110" height="110" loading="eager">
+      <span class="brand-text">
+        <span data-i18n="brand.name">Содействие</span>
+        <small data-i18n="brand.kicker">Коммерческое партнёрство</small>
+      </span>
+    </a>
+
+    <!-- Внутренние ссылки сайта. Каждая страница — это папка с index.html
+         (например /uslugi/), поэтому пути ниже работают на Vercel
+         и на других статических хостингах без дополнительной настройки. -->
+    <div class="header-actions">
+      <div class="nav-popover-wrap">
+        <button class="menu-btn" id="cpa-nav-toggle" aria-label="Меню" aria-expanded="false" aria-controls="cpa-main-nav">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+        <nav class="main-nav" id="cpa-main-nav">
+      <a href="/" data-i18n="nav.home">Главная</a>
+      <a href="/uslugi/" data-i18n="nav.services">Услуги</a>
+      <a href="/o-kompanii/" data-i18n="nav.about">О компании</a>
+      <a href="/news/" data-i18n="nav.news">Новости</a>
+      <a href="/partners/" data-i18n="nav.partners">Партнёрство</a>
+      <a href="/contacts/" data-i18n="nav.contact">Контакты</a>
+        </nav>
+      </div>
+      <div class="lang-switch" role="group" aria-label="Выбор языка / Language">
+        <button type="button" data-lang-btn="ru" aria-pressed="true">RU</button>
+        <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <div class="wrap" style="padding-top:28px">
+    <div class="page-banner band band--a" data-reveal="scale">
+      <span class="page-banner__label" data-i18n="banner.label">Обсудить задачу</span>
+    </div>
+  </div>
+
+  <section class="section form-page-hero" style="padding-top:24px">
+    <div class="wrap stagger">
+      <span class="pill-tag" data-reveal="up" data-i18n="hero.eyebrow">Обсудить задачу</span>
+      <h1 data-reveal="up" data-i18n="hero.title">Расскажите, что случилось</h1>
+      <p class="lede" data-reveal="up" data-i18n="hero.lede">Опишите ситуацию — вернёмся с ответом в течение одного рабочего дня. Чем подробнее, тем быстрее сможем помочь.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap contact-layout">
+      <form class="contact-form" id="cpa-contact-form" novalidate>
+        <div class="form-row">
+          <div class="field">
+            <label for="cpa-f-name" data-i18n="form.f_name">Имя</label>
+            <input type="text" id="cpa-f-name" name="name" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="cpa-f-contact" data-i18n="form.f_contact">Телефон или email</label>
+            <input type="text" id="cpa-f-contact" name="contact" required autocomplete="email">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="cpa-f-subject" data-i18n="form.f_subject">Тема обращения</label>
+          <select id="cpa-f-subject" name="subject">
+            <option value="recognition" data-i18n="form.opt_recognition">Признание решения</option>
+            <option value="bankruptcy" data-i18n="form.opt_bankruptcy">Банкротство</option>
+            <option value="arbitration" data-i18n="form.opt_arbitration">Арбитраж и представительство</option>
+            <option value="corporate" data-i18n="form.opt_corporate">Корпоративный спор</option>
+            <option value="other" data-i18n="form.opt_other">Другое</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="cpa-f-message" data-i18n="form.f_message">Сообщение</label>
+          <textarea id="cpa-f-message" name="message" required data-i18n-placeholder="form.f_message_ph" placeholder="Кратко опишите ситуацию — страну, стороны спора, что уже произошло"></textarea>
+        </div>
+
+        <div class="field">
+          <label class="file-field" for="cpa-f-file">
+            <svg viewBox="2 0 21 21" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M14 7l-6 6a3 3 0 104 4l7-7a5 5 0 00-7-7L5 10"/></svg>
+            <span data-i18n="form.f_file">Прикрепить документы (необязательно)</span>
+            <input type="file" id="cpa-f-file" name="file" multiple>
+          </label>
+        </div>
+
+        <label class="consent">
+          <input type="checkbox" required>
+          <span>
+            <span data-i18n="form.consent_text">Согласен(-на) на обработку персональных данных в соответствии с</span>
+            <a href="/politic/" data-i18n="form.consent_link">политикой конфиденциальности</a>
+          </span>
+        </label>
+
+        <button type="submit" class="btn btn--primary" data-i18n="form.submit">Отправить</button>
+      </form>
+      <div class="contact-info">
+        <div class="info-card">
+          <div class="info-row">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4c0 7 5 12 12 12l2-4-5-2-1 2c-2-1-4-3-5-5l2-1-2-5z"/></svg>
+            <div>
+              <div class="label" data-i18n="info.phone_label">Телефон</div>
+              <!-- заменить на реальный номер перед запуском -->
+              <div class="value">+7 (495) 000-00-00</div>
+            </div>
+          </div>
+          <div class="info-row">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="M2 5l8 6 8-6"/></svg>
+            <div>
+              <div class="label" data-i18n="info.email_label">Email</div>
+              <!-- заменить на реальный адрес перед запуском -->
+              <div class="value">info@sodeystvie-partners.ru</div>
+            </div>
+          </div>
+          <div class="info-row">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="8"/><path d="M10 6v4l3 2"/></svg>
+            <div>
+              <div class="label" data-i18n="info.hours_label">Часы работы</div>
+              <div class="value" data-i18n="info.hours_value">Пн–Пт, 10:00–19:00 (МСК)</div>
+            </div>
+          </div>
+        </div>
+        <p class="info-note" data-i18n="info.note">Для клиентов из других стран СНГ доступны консультации по видеосвязи — заранее согласуем удобное время.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span><span id="cpa-year"></span> <span data-i18n="footer.rights">Содействие. Все права защищены.</span></span>
+    <div class="footer-links">
+      <a href="/contacts/" data-i18n="footer.contact_link">Контакты</a>
+      <a href="/politic/" data-i18n="footer.privacy_link">Политика конфиденциальности</a>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+<script>
+(function(){
+
+  var LOGO_SRC = "/assets/img/logo.png";
+  document.querySelectorAll('.js-logo').forEach(function(img){ img.src = LOGO_SRC; });
+
+  var I18N = {
+    ru: {
+  "brand.name": "Содействие",
+  "brand.kicker": "Коммерческое партнёрство",
+  "nav.home": "Главная",
+  "nav.services": "Услуги",
+  "nav.about": "О компании",
+  "nav.news": "Новости",
+  "nav.partners": "Партнёрство",
+  "nav.contact": "Контакты",
+  "footer.contact_link": "Контакты",
+  "footer.privacy_link": "Политика конфиденциальности",
+  "footer.rights": "Содействие. Все права защищены.",
+  "banner.label": "Обсудить задачу",
+  "hero.eyebrow": "Обсудить задачу",
+  "hero.title": "Расскажите, что случилось",
+  "hero.lede": "Опишите ситуацию — вернёмся с ответом в течение одного рабочего дня. Чем подробнее, тем быстрее сможем помочь.",
+  "form.f_name": "Имя",
+  "form.f_contact": "Телефон или email",
+  "form.f_subject": "Тема обращения",
+  "form.opt_recognition": "Признание решения",
+  "form.opt_bankruptcy": "Банкротство",
+  "form.opt_arbitration": "Арбитраж и представительство",
+  "form.opt_corporate": "Корпоративный спор",
+  "form.opt_other": "Другое",
+  "form.f_message": "Сообщение",
+  "form.f_message_ph": "Кратко опишите ситуацию — страну, стороны спора, что уже произошло",
+  "form.f_file": "Прикрепить документы (необязательно)",
+  "form.consent_text": "Согласен(-на) на обработку персональных данных в соответствии с",
+  "form.consent_link": "политикой конфиденциальности",
+  "form.submit": "Отправить",
+  "form.submitted": "Заявка получена",
+  "info.phone_label": "Телефон",
+  "info.email_label": "Email",
+  "info.hours_label": "Часы работы",
+  "info.hours_value": "Пн–Пт, 10:00–19:00 (МСК)",
+  "info.note": "Для клиентов из других стран СНГ доступны консультации по видеосвязи — заранее согласуем удобное время."
+},
+    en: {
+  "brand.name": "Assistance",
+  "brand.kicker": "Commercial Partnership",
+  "nav.home": "Home",
+  "nav.services": "Services",
+  "nav.about": "About",
+  "nav.news": "News",
+  "nav.partners": "Partnership",
+  "nav.contact": "Contact",
+  "footer.contact_link": "Contact",
+  "footer.privacy_link": "Privacy policy",
+  "footer.rights": "Assistance. All rights reserved.",
+  "banner.label": "Discuss your matter",
+  "hero.eyebrow": "Discuss your matter",
+  "hero.title": "Tell us what happened",
+  "hero.lede": "Describe your situation — we'll get back to you within one business day. The more detail, the faster we can help.",
+  "form.f_name": "Name",
+  "form.f_contact": "Phone or email",
+  "form.f_subject": "Subject",
+  "form.opt_recognition": "Recognition of a judgment",
+  "form.opt_bankruptcy": "Bankruptcy",
+  "form.opt_arbitration": "Arbitration & representation",
+  "form.opt_corporate": "Corporate dispute",
+  "form.opt_other": "Other",
+  "form.f_message": "Message",
+  "form.f_message_ph": "Briefly describe the situation — country, parties involved, what has happened so far",
+  "form.f_file": "Attach documents (optional)",
+  "form.consent_text": "I agree to the processing of personal data under the",
+  "form.consent_link": "privacy policy",
+  "form.submit": "Send",
+  "form.submitted": "Request received",
+  "info.phone_label": "Phone",
+  "info.email_label": "Email",
+  "info.hours_label": "Working hours",
+  "info.hours_value": "Mon–Fri, 10:00–19:00 (MSK)",
+  "info.note": "Clients in other CIS countries can meet by video call — we'll agree on a convenient time in advance."
+}
+  };
+
+  var root = document.documentElement;
+  var textEls = document.querySelectorAll('[data-i18n]');
+  var langButtons = document.querySelectorAll('[data-lang-btn]');
+
+  function applyLang(lang){
+    var dict = I18N[lang] || I18N.ru;
+    textEls.forEach(function(el){
+      var key = el.getAttribute('data-i18n');
+      if(dict[key] !== undefined){ el.textContent = dict[key]; }
+    });
+    root.setAttribute('lang', lang);
+    langButtons.forEach(function(btn){
+      btn.setAttribute('aria-pressed', btn.getAttribute('data-lang-btn') === lang ? 'true' : 'false');
+    });
+  }
+
+  langButtons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var btnLang = btn.getAttribute('data-lang-btn');
+      var current = root.getAttribute('lang') || 'ru';
+      var target = (btnLang === current) ? (current === 'ru' ? 'en' : 'ru') : btnLang;
+      applyLang(target);
+    });
+  });
+
+  var header = document.getElementById('cpa-site-header');
+  function onScroll(){
+    if(window.scrollY > 24){ header.classList.add('is-scrolled'); }
+    else{ header.classList.remove('is-scrolled'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  var navToggle = document.getElementById('cpa-nav-toggle');
+  var mainNav = document.getElementById('cpa-main-nav');
+  function positionNav(){
+    if(!mainNav.classList.contains('is-open')) return;
+    var headerRect = header.getBoundingClientRect();
+    var actionsRect = document.querySelector('.header-actions').getBoundingClientRect();
+    var right = Math.max(16, window.innerWidth - actionsRect.right);
+    mainNav.style.top = (headerRect.bottom + 10) + 'px';
+    mainNav.style.right = right + 'px';
+  }
+  function closeNav(){
+    mainNav.classList.remove('is-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
+  navToggle.addEventListener('click', function(e){
+    e.stopPropagation();
+    var isOpen = mainNav.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    if(isOpen){ positionNav(); }
+  });
+  window.addEventListener('resize', positionNav);
+  mainNav.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', closeNav);
+  });
+  document.addEventListener('click', function(e){
+    if(!mainNav.contains(e.target) && e.target !== navToggle){ closeNav(); }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){ closeNav(); }
+  });
+
+  var yearEl = document.getElementById('cpa-year');
+  if(yearEl){ yearEl.textContent = new Date().getFullYear(); }
+
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if('IntersectionObserver' in window && revealEls.length){
+    var revealObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.15, rootMargin:'0px 0px -8% 0px'});
+    revealEls.forEach(function(el){ revealObserver.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+})();
+(function(){
+  // Форма — только клиентская валидация и визуальное подтверждение.
+  // Перед запуском подключите реальный приём заявок (email / Telegram-бот / CRM-вебхук).
+  var form = document.getElementById('cpa-contact-form');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!form.checkValidity()){ form.reportValidity(); return; }
+    var lang = document.documentElement.getAttribute('lang') === 'en' ? 'en' : 'ru';
+    var dict = {ru:"Заявка получена", en:"Request received"};
+    var btn = form.querySelector('button[type="submit"]');
+    btn.textContent = dict[lang];
+    btn.disabled = true;
+  });
+})();
+</script>
+</body>
+</html>
