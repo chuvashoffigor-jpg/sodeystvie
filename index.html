@@ -658,18 +658,22 @@
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:20px;
+    align-items:stretch;
   }
   #cpa-root .poster-card{
     border-radius:var(--r-md);
     overflow:hidden;
     box-shadow:var(--shadow-card);
     transition:transform .35s var(--ease);
+    display:flex;
+    flex-direction:column;
   }
   #cpa-root .poster-card:hover{transform:translateY(-4px);}
   #cpa-root .poster-art{
     position:relative;
     overflow:hidden;
     min-height:240px;
+    flex:1;
     display:flex;
     align-items:center;
     padding:clamp(24px,3vw,34px);
