@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cp-assistance.ru/sitemap.xml
+Sitemap: https://www.cp-assistance.ru/sitemap.xml
