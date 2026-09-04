@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://YOUR-DOMAIN.example/</loc></url>
-  <url><loc>https://YOUR-DOMAIN.example/uslugi/</loc></url>
-  <url><loc>https://YOUR-DOMAIN.example/o-kompanii/</loc></url>
-  <url><loc>https://YOUR-DOMAIN.example/news/</loc></url>
-  <url><loc>https://YOUR-DOMAIN.example/partners/</loc></url>
-  <url><loc>https://YOUR-DOMAIN.example/contacts/</loc></url>
-  <url><loc>https://YOUR-DOMAIN.example/forms/</loc></url>
-  <url><loc>https://YOUR-DOMAIN.example/politic/</loc></url>
+  <url><loc>https://cp-assistance.ru/</loc></url>
+  <url><loc>https://cp-assistance.ru/uslugi/</loc></url>
+  <url><loc>https://cp-assistance.ru/o-kompanii/</loc></url>
+  <url><loc>https://cp-assistance.ru/news/</loc></url>
+  <url><loc>https://cp-assistance.ru/partners/</loc></url>
+  <url><loc>https://cp-assistance.ru/contacts/</loc></url>
+  <url><loc>https://cp-assistance.ru/forms/</loc></url>
+  <url><loc>https://cp-assistance.ru/politic/</loc></url>
 </urlset>
