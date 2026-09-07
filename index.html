@@ -667,14 +667,13 @@
     transition:transform .35s var(--ease);
     display:flex;
     flex-direction:column;
-    min-height:340px;
   }
   #cpa-root .poster-card:hover{transform:translateY(-4px);}
   #cpa-root .poster-art{
     position:relative;
     overflow:hidden;
-    min-height:240px;
-    flex:1;
+    height:220px;
+    flex:none;
     display:flex;
     align-items:center;
     padding:clamp(24px,3vw,34px);
@@ -705,26 +704,29 @@
     position:relative; z-index:1;
     color:#fff;
     font-weight:900;
-    font-size:clamp(1.375rem, 2.6vw, 1.875rem);
-    line-height:1.12;
-    max-width:12ch;
+    font-size:clamp(1.25rem, 2.2vw, 1.625rem);
+    line-height:1.15;
+    max-width:15ch;
     word-break:keep-all;
     overflow-wrap:normal;
   }
   #cpa-root .poster-caption{
     background:var(--blue-600);
     padding:22px 26px;
+    height:150px;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
   }
   #cpa-root .poster-caption h3{color:#fff; font-weight:700; font-size:1.0625rem; line-height:1.35;}
   #cpa-root .poster-caption p{margin-top:.4em; color:#c9d6fb; font-size:.8125rem;}
 
   @media (max-width:780px){
   #cpa-root .poster-grid{grid-template-columns:1fr 1fr; gap:10px;}
-  #cpa-root .poster-card{min-height:220px;}
-  #cpa-root .poster-art{min-height:110px; padding:14px;}
-  #cpa-root .poster-art .big-label{font-size:.875rem; max-width:12ch; line-height:1.2;}
+  #cpa-root .poster-art{height:130px; padding:14px;}
+  #cpa-root .poster-art .big-label{font-size:.8125rem; max-width:14ch; line-height:1.2;}
   #cpa-root .poster-art::after{width:120px; height:120px; right:-40px; bottom:-40px;}
-  #cpa-root .poster-caption{padding:12px 14px;}
+  #cpa-root .poster-caption{height:130px; padding:12px 14px;}
   #cpa-root .poster-caption h3{font-size:.75rem; line-height:1.3;}
   #cpa-root .poster-caption p{display:none;}
   }
@@ -1146,6 +1148,24 @@
             <h3 data-i18n="services.s4_body">Разрешение конфликтов между партнёрами, акционерами и участниками компаний.</h3>
           </div>
         </a>
+
+        <a href="/uslugi/#s2" class="poster-card" data-reveal="left">
+          <div class="poster-art poster-art--uniform">
+            <span class="big-label" data-i18n="cases.c1_poster">Трансграничное банкротство</span>
+          </div>
+          <div class="poster-caption">
+            <h3 data-i18n="cases.c1_title">Банкротство с активами в разных юрисдикциях</h3>
+          </div>
+        </a>
+
+        <a href="/uslugi/#s1" class="poster-card" data-reveal="right">
+          <div class="poster-art poster-art--uniform">
+            <span class="big-label" data-i18n="cases.c2_poster">Трансграничное приведение в исполнение решений судов и арбитражей</span>
+          </div>
+          <div class="poster-caption">
+            <h3 data-i18n="cases.c2_title">Исполнение решения иностранного суда в России</h3>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -1404,6 +1424,10 @@
       "services.s3_body":"Защита интересов в МКАС при ТПП РФ и других арбитражных центрах на всех стадиях спора.",
       "services.s4_title":"Экономические и корпоративные споры",
       "services.s4_body":"Разрешение конфликтов между партнёрами, акционерами и участниками компаний.",
+      "cases.c1_poster":"Трансграничное банкротство",
+      "cases.c1_title":"Банкротство с активами в разных юрисдикциях",
+      "cases.c2_poster":"Трансграничное приведение в исполнение решений судов и арбитражей",
+      "cases.c2_title":"Исполнение решения иностранного суда в России",
 
       "cases.title_a":"Задачи, с которыми ",
       "cases.title_b":"мы работаем",
@@ -1525,6 +1549,10 @@
       "services.s3_body":"Representing your interests before the ICAC at the RF CCI and other arbitration centres at every stage of a dispute.",
       "services.s4_title":"Economic & Corporate Disputes",
       "services.s4_body":"Resolving conflicts between partners, shareholders and company members.",
+      "cases.c1_poster":"Cross-border bankruptcy",
+      "cases.c1_title":"Bankruptcy with assets across several CIS countries",
+      "cases.c2_poster":"Cross-border enforcement of court and arbitration judgments",
+      "cases.c2_title":"Enforcing a foreign court judgment in Russia",
 
       "cases.title_a":"The kind of matters ",
       "cases.title_b":"we handle",
