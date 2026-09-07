@@ -33,7 +33,8 @@
   }
   #cpa-root,#cpa-root *,#cpa-root *::before,#cpa-root *::after{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  #cpa-root{margin:0;background:var(--bg);color:var(--ink-900);font-family:var(--font);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;}
+  #cpa-root{margin:0;background:var(--bg);color:var(--ink-900);font-family:var(--font);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;}
+  @media (min-width:781px){ #cpa-root{ font-size:17px; } }
   #cpa-root img{max-width:100%;display:block;}
   #cpa-root a{color:inherit;text-decoration:none;}
   #cpa-root ul{margin:0;padding:0;list-style:none;}
@@ -99,7 +100,7 @@
     #cpa-root .main-nav a{padding:10px 12px;border-radius:10px;transition:background-color .2s var(--ease);}
     #cpa-root .main-nav a:hover{background:rgba(28,79,214,.1);}
     #cpa-root .main-nav a.is-active{background:var(--blue-100);}
-    #cpa-root .brand-icon{width:45px;height:45px;margin-top:4px;margin-left:3px;}
+    #cpa-root .brand-icon{width:56px;height:56px;margin-top:5px;margin-left:3px;}
     #cpa-root .brand-text{font-size:1.1rem;}
     #cpa-root .brand-text small{font-size:.625rem;letter-spacing:.02em;}
     #cpa-root .header-actions{gap:8px;}
