@@ -290,8 +290,8 @@
     flex-wrap:nowrap;
   }
   #cpa-root .brand{display:flex; align-items:center; gap:16px; min-width:0; flex-shrink:1;}
-  #cpa-root .brand-icon{width:88px; height:88px; object-fit:contain; flex-shrink:0; display:block; margin-top:0;}
-  #cpa-root .brand-text{font-size:1.59rem; font-weight:700; line-height:1.15; min-width:0; overflow:hidden; text-align:left;}
+  #cpa-root .brand-icon{width:66px; height:66px; object-fit:contain; flex-shrink:0; display:block; margin-top:0;}
+  #cpa-root .brand-text{font-size:1.19rem; font-weight:700; line-height:1.15; min-width:0; overflow:hidden; text-align:left;}
   #cpa-root .brand-text span{
   display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
   color:var(--ink-900);
@@ -299,7 +299,7 @@
   #cpa-root .brand-text small{
     display:block;
     font-weight:600;
-    font-size:1.03rem;
+    font-size:.7725rem;
     letter-spacing:.05em;
     text-transform:uppercase;
     margin-top:2px;
@@ -416,7 +416,10 @@
     background:var(--white);
     border-radius:var(--r-lg);
     box-shadow:var(--shadow-card);
-    padding:clamp(48px, 7vw, 96px) clamp(32px, 5vw, 64px);
+    padding-top:clamp(48px, 7vw, 96px);
+    padding-bottom:clamp(16px, 2.5vw, 24px);
+    padding-left:clamp(32px, 5vw, 64px);
+    padding-right:clamp(32px, 5vw, 64px);
   }
   #cpa-root .hero-layout{
     display:grid;
@@ -541,7 +544,10 @@
     overflow:hidden;
     background:radial-gradient(120% 160% at 100% 0%, #16234a 0%, var(--navy-900) 55%, #060a12 100%);
     border-radius:var(--r-lg);
-    padding:clamp(40px, 7vw, 88px);
+    padding-top:clamp(16px, 2.5vw, 24px);
+    padding-bottom:clamp(40px, 7vw, 88px);
+    padding-left:clamp(40px, 7vw, 88px);
+    padding-right:clamp(40px, 7vw, 88px);
     color:#fff;
   }
   #cpa-root .philosophy-panel .pill-tag{
